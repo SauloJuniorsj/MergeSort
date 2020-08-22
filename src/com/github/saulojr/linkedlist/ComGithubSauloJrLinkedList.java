@@ -27,7 +27,7 @@ public class ComGithubSauloJrLinkedList {
 
         System.out.println("Antes do Merge Sort");
         MergeSort.printar(Grupo);
-        
+        System.out.print("\n\n\n");
         System.out.println("Depois do Merge Sort");
         MergeSort.printar(MergeSort.sort(Grupo));
     }
