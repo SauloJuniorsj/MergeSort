@@ -19,15 +19,17 @@ public class ComGithubSauloJrLinkedList {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
-        
+
         LinkedList<Pessoa> Grupo = new LinkedList<>();
-        for(int i = 0; i < 100; i++){
-        Grupo.add(new Pessoa(Pessoa.random_name(), Long.parseLong(Pessoa.random_RG()), Date.from(Pessoa.random_data().atStartOfDay(ZoneId.systemDefault()).toInstant())));
+        for (int i = 0; i < 100; i++) {
+            Grupo.add(new Pessoa(Pessoa.random_name(), Long.parseLong(Pessoa.random_RG()), Date.from(Pessoa.random_data().atStartOfDay(ZoneId.systemDefault()).toInstant())));
         }
+
+        System.out.println("Antes do Merge Sort");
+        MergeSort.printar(Grupo);
         
-        for(Pessoa i : Grupo){
-            System.out.println(i.getNome() + ", " + i.getRG() + ", " + i.getData());
-        }
+        System.out.println("Depois do Merge Sort");
+        MergeSort.printar(MergeSort.sort(Grupo));
     }
-    
+
 }
